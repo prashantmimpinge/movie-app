@@ -5,7 +5,7 @@ import UserModel, { User } from "@/model/User";
 
 export async function GET(
   request: Request,
-  context: { params: { movieId: string } }
+  context: any
 ) {
   await dbConnect();
   const session = await getServerSession(authOptions);
@@ -83,7 +83,7 @@ export async function GET(
 
 export async function PUT(
   request: Request,
-  context: { params: { movieId: string } }
+  context: any
 ) {
   await dbConnect();
   const session = await getServerSession(authOptions);
